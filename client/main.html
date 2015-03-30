@@ -1,0 +1,24 @@
+<head>
+  <title>Meteor Full Text Demo</title>
+</head>
+
+<body>
+  <h1>Welcome to Full Text Search!</h1>
+
+  {{> fts}}
+</body>
+
+<template name="fts">
+
+  <form name="searchForm">
+    <input type="text" id="text" name="text" placeholder="search...">
+    <input id="search" type="submit">
+  </form>
+
+  <ul>
+  {{ #each messages }}
+    <li>{{ subject }}: {{ content }}</li>
+  {{ /each }}
+  </ul>
+
+</template>
